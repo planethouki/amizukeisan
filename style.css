@@ -1,9 +1,14 @@
-.container {
+/* .container {
     display: flex;
     align-items: center;
     gap: 10px;
-}
+} */
 /* 
 form {
     width: 50px;
 } */
+
+
+#inputStitch, #inputDiff {
+    width: 200px;
+}

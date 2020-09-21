@@ -2,37 +2,50 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>増減計算</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>増減計算表</h1>
-    <p>※目数と増減を入力してください</p>
- 
- <div class="container">
-     <p>目数：<form><input type="text"></form></p>
-     <p>増減：<form><input type="text"></form></p>
-     <form action="caluculation.js">
-         <input type="submit" value="計算する">
-     </form>
- </div>
 
-    <table border="1">
-        <tr>
-            <th>目数</th>
-            <th>増減</th>
-            <th>計算結果</th>
-        </tr>
-        <tr>
-            <td>firstStich</td>
-            <td>／</td>
-            <td>／</td>
-        </tr>
-        <tr>
-            <td>secondStich</td>
-            <td>zougen</td>
-            <td>結果</td>
-        </tr>
-    </table>
+    <div class="container">
+        <h1>増減計算表</h1>
+        <p>※目数と増減を入力してください</p>
+        
+        <div>
+            <form>
+                <p>
+                    目数：<input type="text" id="inputStitch" value="3">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    増減：<input type="text" id="inputDiff" value="4">
+                </p>
+                <button type="button" class="btn btn-primary" id="startCalc">計算する</button>
+            </form>
+        </div>
+    
+        <table border="1">
+            <tr>
+                <th>目数</th>
+                <th>増減</th>
+                <th>計算結果</th>
+            </tr>
+            <tr>
+                <td id="firstStich">firstStich</td>
+                <td>／</td>
+                <td>／</td>
+            </tr>
+            <tr>
+                <td id="secondStich">secondStich</td>
+                <td id="zougen">zougen</td>
+                <td id="result">結果</td>
+            </tr>
+        </table>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="caluculation.js"></script>
 </body>
 </html>
